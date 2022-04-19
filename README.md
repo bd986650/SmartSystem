@@ -17,14 +17,14 @@ Smart System поддерживает следующие девайсы:
 
 ## Screenshots & Demo gif
 
-[<img src="/screenshots/screens1.png" align="left"
+[<img src="/screenshots/screen1.png" align="left"
 width="200"
-hspace="10" vspace="10">](/screenshots/screens1.png)
-[<img src="/screenshots/screens29.png" align="left"
+hspace="10" vspace="10">](/screenshots/screen1.png)
+[<img src="/screenshots/screen2.png" align="left"
 width="200"
-hspace="10" vspace="10">](/screenshots/screens2.png)
+hspace="10" vspace="10">](/screenshots/screen2.png)
 
-[<img src="/screenshots/preview.gif" align="center"
+[<img src="/screenshots/screen3.png" align="center"
 width="200"
-hspace="10" vspace="10">](/screenshots/preview.gif)
+hspace="10" vspace="10">](/screenshots/screen3.png)
 
