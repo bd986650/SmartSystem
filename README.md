@@ -15,7 +15,7 @@ Smart System поддерживает следующие девайсы:
 - Devices using Tasmota
 - Devices using the SimpleHome API
 
-## Screenshots & Demo gif
+## Demo Screenshots
 
 [<img src="screen1.png" align="left"
 width="200"
