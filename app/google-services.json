@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "403912406436",
+    "project_id": "smartsystem-16c42",
+    "storage_bucket": "smartsystem-16c42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:403912406436:android:39898218596ffa9f10fd31",
+        "android_client_info": {
+          "package_name": "com.example.smartsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "403912406436-3qjcm09im1pnvrpb64q68uhvbg666r1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5cHQPHYtmUDfrlFtw5m_W7xDy4b63-Ns"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "403912406436-3qjcm09im1pnvrpb64q68uhvbg666r1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

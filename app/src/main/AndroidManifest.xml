@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.smartsystem">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <package android:name="com.philips.lighting.hue2" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeDark"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning,UnusedAttribute"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+        <activity
+            android:name="home.activities.HueSceneActivity"
+            android:label="@string/hue_add_scene"
+            android:parentActivityName="home.activities.MainActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.AboutActivity"
+            android:label="@string/about"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.SettingsActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.ContributorActivity"
+            android:label="@string/about_contributors"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.AboutActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.LibraryActivity"
+            android:label="@string/about_libraries"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.AboutActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.SearchDevicesActivity"
+            android:label="@string/pref_add"
+            android:parentActivityName="home.activities.DevicesActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.HueConnectActivity"
+            android:theme="@style/AppThemeDark.NoActionBar"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.HueLampActivity"
+            android:parentActivityName="home.activities.MainActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeSplash"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="home.activities.MainActivity"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeDark.NoActionBar"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.SettingsActivity"
+            android:label="@string/pref"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.MainActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.WebActivity"
+            android:label="@string/webView"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="home.activities.MainActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.DevicesActivity"
+            android:label="@string/pref"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.SettingsActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.EditDeviceActivity"
+            android:label="@string/pref_add"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.DevicesActivity"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name="home.activities.HueSettingsActivity"
+            android:label="@string/device_config_info"
+            android:launchMode="singleTop"
+            android:parentActivityName="home.activities.EditDeviceActivity"
+            tools:ignore="MissingClass" />
+        <service
+            android:name="home.services.ControlService"
+            android:permission="android.permission.BIND_CONTROLS"
+            android:exported="true"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="android.service.controls.ControlsProviderService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

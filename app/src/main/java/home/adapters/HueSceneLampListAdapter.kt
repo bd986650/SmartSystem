@@ -1,0 +1,48 @@
+package home.adapters
+
+import android.content.res.ColorStateList
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import android.view.View
+import android.widget.ImageView
+import android.widget.TextView
+import android.view.LayoutInflater
+import androidx.core.widget.ImageViewCompat
+import com.example.smartsystem.R
+import home.data.SimpleListItem
+
+class HueSceneLampListAdapter(
+    private val items: ArrayList<SimpleListItem>,
+    private val colors: ArrayList<Int>
+    ) : RecyclerView.Adapter<HueSceneLampListAdapter.ViewHolder>() {
+
+    override fun onCreateViewHolder(
+        parent: ViewGroup,
+        viewType: Int
+    ): ViewHolder {
+        return ViewHolder(
+            LayoutInflater
+                .from(parent.context)
+                .inflate(R.layout.list_item_simple, parent, false)
+        )
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.drawable.setImageResource(items[position].icon)
+        holder.title.text = items[position].title
+        holder.summary.text = items[position].summary
+        holder.hidden.text = items[position].hidden
+        ImageViewCompat.setImageTintList(holder.drawable, ColorStateList.valueOf(colors[position]))
+    }
+
+    override fun getItemCount(): Int {
+        return items.size
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val drawable: ImageView = view.findViewById(R.id.drawable)
+        val title: TextView = view.findViewById(R.id.title)
+        val summary: TextView = view.findViewById(R.id.summary)
+        val hidden: TextView = view.findViewById(R.id.hidden)
+    }
+}

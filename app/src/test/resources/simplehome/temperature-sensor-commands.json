@@ -1,0 +1,16 @@
+{
+  "commands": {
+    "temperature": {
+      "title": "Temperature",
+      "summary": "It is currently 18.00°C in your room",
+      "icon": "thermometer",
+      "mode": "none"
+    },
+    "humidity": {
+      "title": "Humidity",
+      "summary": "The humidity is 86.30%",
+      "icon": "hygrometer",
+      "mode": "none"
+    }
+  }
+}
